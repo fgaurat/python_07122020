@@ -4,4 +4,4 @@
 class ICalcMath:
 
         def calc_surface(self):
-            pass
+            raise NotImplementedError("calc_surface NotImplemented !")

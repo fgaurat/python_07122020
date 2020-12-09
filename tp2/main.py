@@ -3,7 +3,9 @@ from Rectangle import Rectangle
 from RectangleP import RectangleP
 from Carre import Carre
 from Cercle import Cercle
+from ICalcMath import ICalcMath
 from Calc import Calc
+from DivBy12Exception import DivBy12Exception
 
 def showSurface(o):
     print("def showSurface(o):")
@@ -40,21 +42,24 @@ def main():
     # print(rp.calc_surface())
     # rp = RectangleP(1,2)
     # c = Carre(2)
-    # ce = Cercle(2)
-    # print(Cercle.__mro__)
+    ce = Cercle(2)
+    print(Cercle.__mro__)
     # print(ce)
     # showSurface(rp)
     # showSurface(c)
-    # showSurface(ce)
+    showSurface(ce)
+    # calc = Calc()
 
-    calc = Calc()
-    try:
-        c = calc.div(1,0)
-        print(c)
-    except:
-        print("erreur")
-        
-    print("après erreur")
+    # try:
+    #     c = calc.div(1,12)
+    #     print(c)
+    # # except ZeroDivisionError as e:
+    # #     print("erreur",e)
+    # except DivBy12Exception as e:
+    #     print("DivBy12Exception erreur",e)
+    #     raise Exception()
+    # finally:
+    #     print("après erreur")
 
 
 
