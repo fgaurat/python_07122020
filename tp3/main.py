@@ -12,7 +12,6 @@ def main():
     conf = configparser.ConfigParser()
     conf.read(args.conf) # args.conf = conf.ini
 
-
     todoDAO = TodoDAO(conf['SQLITE']['file'])
     
     todo = Todo(title="Le titre",completed=False,dueDate=1231456)
