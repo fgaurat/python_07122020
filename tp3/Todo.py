@@ -30,3 +30,6 @@ class Todo:
     @dueDate.setter
     def dueDate(self,dueDate):
         self._dueDate = dueDate
+    
+    def __str__(self):
+        return f"Todo : title={self._title}, completed={self._completed}, dueDate={self._dueDate} "
